@@ -1,0 +1,13 @@
+/* Loading */
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.loader-gif {
+  width: 100px; /* Adjust the size as needed */
+  height: auto;
+}

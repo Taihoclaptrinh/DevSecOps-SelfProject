@@ -1,0 +1,32 @@
+.landing-page {
+    width: 100%;
+    height: 450vh;
+    /* background-color: #7fffd4; */
+}
+.landing-background {
+    position: relative;
+    width: 100%;
+    max-height:  70vh;
+    background-color: #7fffd4;
+    object-fit:cover; 
+    display: flex;
+    overflow:hidden;
+    align-items: center;
+}
+.landing-main-content {
+    position: relative;
+    margin-top: 5vh;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+.container{
+    position: relative;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 74vw;
+    flex-direction: column;
+}

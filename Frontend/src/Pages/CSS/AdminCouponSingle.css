@@ -1,0 +1,138 @@
+/* AdminProductSingle.css */
+
+/* General Styles */
+.admin-product-single {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.single-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top {
+  display: flex;
+  gap: 20px;
+}
+
+.left {
+  flex: 3;
+}
+
+.right {
+  flex: 1;
+}
+
+.button-container {
+  margin-bottom: 20px;
+}
+
+.edit-button, .save-button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  width: 6rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(131, 128, 128, 0.7);
+}
+
+.edit-button:hover, .save-button:hover{
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(131, 128, 128, 0.7);
+  transform: translateY(2px);
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+}
+
+.Coupon_single_title {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #242828 ;
+  display: flex;
+  justify-content: center;
+}
+
+.Coupon_single_item {
+  display: flex;
+  gap: 20px;
+}
+
+.item-img {
+  max-width: 150px; /* Make images smaller */
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.Coupon_single_details {
+  flex: 5;
+  color:#242828;
+  margin-bottom: 4rem;
+}
+
+.Coupon_single_item-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  color: #292828;
+}
+
+.Coupon_single_detail-item {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: 95%;
+}
+.Coupon_single_detail-item label {
+  display: flex;
+}
+.Coupon_single_detail-item .Coupon_single_item-key {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  width: 20%;
+}
+
+.Coupon_single_detail-item .Coupon_single_item-value {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc; 
+  font-size: 1.2rem;
+  margin-left: 10px;
+  font-weight: 400;
+  width: 75%;
+  display: flex;
+  align-items: center;
+}
+
+.Coupon_single_detail-item input {
+  font-size: 1.2rem;
+  height: 2rem;
+  width: 75%;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Additional Styles for Charts */
+.admin-chart {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}

@@ -1,0 +1,162 @@
+.AdminNew {
+  width: 100%;
+  display: flex;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AdminNew .newContainer {
+  width: 90%;
+  max-width: 1200px;
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.AdminNew .newContainer .top {
+  background-color: #f4f6f9;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AdminNew .newContainer .top h1 {
+  color: #333;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.AdminNew .newContainer .bottom {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.AdminNew .newContainer .left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.AdminNew .newContainer .left .imagePreviewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.AdminNew .newContainer .left .imagePreviewContainer img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.AdminNew .newContainer .right {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.AdminNew .newContainer .right form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.AdminNew .newContainer .right form .formInput {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+}
+
+.AdminNew .newContainer .right form .formInput label {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.AdminNew .newContainer .right form .formInput label .icon {
+  cursor: pointer;
+  font-size: 16px;
+  color: teal;
+}
+
+.AdminNew .newContainer .right form .formInput input {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AdminNew .newContainer .right form .formInput input:focus {
+  z-index: 1;
+  width: auto;
+  min-width: 100%;
+  max-width: none;
+}
+
+.AdminNew .newContainer .right form button {
+  width: 200px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: teal;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 20px;
+  align-self: center;
+  transition: background-color 0.3s;
+}
+
+.AdminNew .newContainer .right form button:hover {
+  background-color: #006666;
+}
+
+.AdminNew .newContainer .right form .fileInput {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.AdminNew .newContainer .right form .fileInput label {
+  width: calc(100% - 20px);
+  background-color: #f0f0f0;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.AdminNew .newContainer .right form .fileInput label:hover {
+  background-color: #e0e0e0;
+}
+
+.AdminNew .newContainer .right form .fileInput input {
+  display: none;
+}

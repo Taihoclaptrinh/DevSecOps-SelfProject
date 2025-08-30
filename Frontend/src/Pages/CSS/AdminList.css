@@ -1,0 +1,10 @@
+.AdminList {
+  display: flex;
+  width: 100%;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+.AdminList .listContainer {
+  flex: 6;
+}

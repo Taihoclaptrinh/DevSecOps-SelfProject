@@ -1,0 +1,104 @@
+.CTA-layout {
+    position: relative;
+    display: flex;
+    width: 74vw;
+    max-height: 40rem;
+    flex-shrink: 0;
+    justify-content: center; 
+    background-color: red;
+}
+.CTA-background { 
+    width: 100%; 
+    height: 100%; 
+    display: flex;
+    justify-items: center;
+    text-align: center;
+}
+.CTA-background img {
+    height: 100%;
+    width:100%;
+}
+.CTA_container {
+    width:100%;
+    text-align: center;
+    position: absolute;
+    margin-top: 5%;
+    /* background-color: aqua; */
+}
+.gradient-text {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    font-family: Raleway;
+    font-weight:bolder;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+.top {
+    background: linear-gradient(90deg, white 51.5%, black 48%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+}
+.bottom {
+    background: linear-gradient(90deg, white 56%, black 44%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+}
+.format-text {
+    color: #FFF;
+    text-align: center;
+    font-family: "Inria Sans";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 4%;
+}
+
+.CTA-button {
+    position: absolute;
+    display: inline-flex;
+    gap: 50px;
+    border-color: #000;
+    justify-content: center;
+    text-align: center;
+    font-size: 100%;
+    margin-top: 28%;
+    width: 100%;
+}
+
+.CTA-button .CTA_left-section {
+    flex: 0.13;
+    background-color: black;
+    color: #FFFFFF;
+    padding: 10px;
+    font-weight: normal;
+    border: 1px solid #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(131, 128, 128, 0.7);
+}
+.CTA-button .CTA_right-section {
+    flex: 0.13;
+    color: white;
+    padding: 10px;
+    font-weight: normal;
+    border: 1px solid white; 
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(131, 128, 128, 0.7);
+}
+
+.CTA_left-section:hover, 
+.CTA_right-section:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(131, 128, 128, 0.7);
+    transform: translateY(2px);
+}

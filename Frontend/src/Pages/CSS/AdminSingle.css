@@ -1,0 +1,170 @@
+.AdminSingle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+.AdminSingle .singleContainer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.AdminSingle .singleContainer .top {
+  display: flex;
+  gap: 20px;
+}
+
+.AdminSingle .singleContainer .top .left,
+.AdminSingle .singleContainer .top .right {
+  flex: 1;
+  min-width: 0;
+}
+
+.AdminSingle .singleContainer .top .left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.AdminSingle .singleContainer .top .left .buttonContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.AdminSingle .singleContainer .top .left .buttonContainer .editButton,
+.AdminSingle .singleContainer .top .left .buttonContainer .saveButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+}
+
+.AdminSingle .singleContainer .top .left .buttonContainer .editButton {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.AdminSingle .singleContainer .top .left .buttonContainer .editButton:hover {
+  background-color: #0056b3;
+}
+
+.AdminSingle .singleContainer .top .left .buttonContainer .saveButton {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.AdminSingle .singleContainer .top .left .buttonContainer .saveButton:hover {
+  background-color: #218838;
+}
+
+.AdminSingle .singleContainer .top .left .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.AdminSingle .singleContainer .top .left .item {
+  display: flex;
+  gap: 20px;
+}
+
+.AdminSingle .singleContainer .top .left .item .imagePreviewContainer {
+  flex-shrink: 0;
+}
+
+.AdminSingle .singleContainer .top .left .item .itemImg {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #e9ecef;
+}
+
+.AdminSingle .singleContainer .top .left .item .details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.AdminSingle .singleContainer .top .left .item .details .itemTitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #555;
+}
+
+.AdminSingle .singleContainer .top .left .item .details .detailItem {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  align-items: center;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.AdminSingle .singleContainer .top .left .item .details .detailItem .itemKey {
+  font-weight: bold;
+  color: #777;
+  width: 100px;
+  flex-shrink: 0;
+}
+
+.AdminSingle .singleContainer .top .left .item .details .detailItem .itemValue {
+  color: #333;
+  font-size: 15px;
+  flex: 1;
+  min-width: 0;
+  margin: 10px 0;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 48%;
+  display: flex;
+  gap: 5px;
+  position: relative;
+}
+
+.AdminSingle .singleContainer .top .left .item .details .detailItem .itemValue input {
+  width: 100%;
+  max-width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.AdminSingle .singleContainer .top .left .item .details .detailItem .itemValue input:focus {
+  z-index: 1;
+  width: auto;
+  min-width: 100%;
+  max-width: none;
+}
+
+.AdminSingle .singleContainer .top .right .chartContainer {
+  width: 100%;
+  height: 300px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+}

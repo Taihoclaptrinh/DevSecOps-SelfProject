@@ -1,0 +1,72 @@
+variables:
+    # project-registry/project-gitlab:tag_commit
+    DOCKER_IMAGE_BE: ${REGISTRY_PROJECT}/${REGISTRY_REPO}:${CI_COMMIT_TAG}_${CI_COMMIT_SHORT_SHA}_backend
+    DOCKER_IMAGE_FE: ${REGISTRY_PROJECT}/${REGISTRY_REPO}:${CI_COMMIT_TAG}_${CI_COMMIT_SHORT_SHA}_frontend
+    DOCKER_CONTAINER_FE: frontend-app
+    DOCKER_CONTAINER_BE: backend-app
+
+stages:
+    - buildandpush
+    - deploy
+    - checklog
+
+build_backend:
+    stage: buildandpush
+    variables:
+        GIT_STRATEGY: clone
+    before_script:
+        - docker login -u ${REGISTRY_USER} -p ${REGISTRY_PASSWD}
+    script:
+        - docker build -t $DOCKER_IMAGE_BE .
+        - docker push $DOCKER_IMAGE_BE
+    tags:
+        - staging-runner
+    only:
+        - tags
+
+build_frontend:
+    stage: buildandpush
+    variables:
+        GIT_STRATEGY: clone
+    before_script:
+        - cd Frontend
+        - docker login -u ${REGISTRY_USER} -p ${REGISTRY_PASSWD}
+    script:
+        - docker build -t $DOCKER_IMAGE_FE .
+        - docker push $DOCKER_IMAGE_FE
+    tags:
+        - staging-runner
+    only:
+        - tags
+
+deploy:
+    stage: deploy
+    variables:
+        GIT_STRATEGY: none
+    before_script:
+        - docker login -u ${REGISTRY_USER} -p ${REGISTRY_PASSWD}
+    script:
+        - docker pull $DOCKER_IMAGE_FE
+        - docker pull $DOCKER_IMAGE_BE
+        - docker rm -f $DOCKER_CONTAINER_FE || true
+        - docker rm -f $DOCKER_CONTAINER_BE || true
+        - docker run --name $DOCKER_CONTAINER_FE -dp 80:80 $DOCKER_IMAGE_FE
+        - docker run --name $DOCKER_CONTAINER_BE -dp 5000:5000 $DOCKER_IMAGE_BE
+    allow_failure: true
+    tags:
+        - staging-runner
+    only:
+        - tags
+
+checklog:
+    stage: checklog
+    variables:
+        GIT_STRATEGY: none
+    script:
+        - sleep 20
+        - docker logs $DOCKER_CONTAINER_FE
+        - docker logs $DOCKER_CONTAINER_BE
+    tags:
+        - staging-runner
+    only:
+        - tags

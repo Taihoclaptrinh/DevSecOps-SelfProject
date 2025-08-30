@@ -1,0 +1,14 @@
+services:
+  frontend:
+    container_name: frontend-app
+    image: frontend:v1
+    ports:
+      - "80:80"
+    restart: unless-stopped
+
+  backend:
+    container_name: backend-app
+    image: backend:v1
+    ports:
+      - "5000:5000"
+    restart: unless-stopped

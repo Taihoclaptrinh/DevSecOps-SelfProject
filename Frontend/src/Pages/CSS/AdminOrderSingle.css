@@ -1,0 +1,79 @@
+.admin-order-single {
+  padding: 20px;
+}
+
+.single-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Order_Single_table-container {
+  overflow-x: auto;
+}
+
+.Order_Single_table-container table {
+  width: 95%;
+  border-collapse: collapse;
+}
+
+.Order_Single_table-container th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center; /* Center content in table cells */
+}
+
+.Order_Single_table-container th {
+  background-color: #f2f2f2;
+}
+.top {
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  flex: 1;
+}
+
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  justify-content: center;
+  display: flex;
+  color: #292828;
+}
+
+.item {
+  margin-bottom: 20px;
+}
+
+.Order_Single_details {
+  padding: 10px;
+  color: #292828;
+}
+
+.Order_Single_detail-item {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: 95%;
+}
+
+.Order_Single_detail-item label {
+  display: flex;
+}
+.Order_Single_detail-item .Order_Single_item-key {
+  font-weight: bold;
+  font-size: 20px;
+  width: 15%;
+  display: flex;
+}
+
+.Order_Single_detail-item .Order_Single_item-value {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc; 
+
+  margin-left: 10px;
+  font-weight: 400;
+  font-size: 1.2rem;
+  width: 94%;
+}

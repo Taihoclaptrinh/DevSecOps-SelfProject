@@ -1,0 +1,25 @@
+.address-container{
+    width: 30rem;
+    justify-content: center;
+}
+.address-selector {
+    padding: 10px;
+    font-size: 1.2rem; /* Font size for the dropdown */
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.address-selector select:focus {
+    border-color: #007bff;
+    outline: none;
+    background-color: #fff;
+}
+
+/* Increase the font size of the option elements */
+.address-selector option {
+    font-size: 1.4rem; /* Larger font size for options */
+}

@@ -1,0 +1,523 @@
+.product-page {
+  width: 100%;
+  max-height: 3400px;
+  display: flex;
+  justify-content: center;
+}
+.product-page-layout{
+  position: relative;
+  max-width: 74vw;
+  top:2%;
+}
+.product-page-layout h1{
+  color: #000;
+  font-family: "Inria Sans";
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+/* Contain the image and info of product */
+.main-container{
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-height: 100rem;
+  display: flex;
+  gap: 3rem;
+}
+.main-container .product-section{
+  width: 100vw;
+  height: auto;
+  flex: 0.75;
+}
+.product-image-list{
+  position: relative;
+  width: auto;
+  max-height: 65rem;
+  flex-shrink: 0;
+}
+
+.product-image-list .image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+  max-width: 150rem;  /* size of grid */
+  justify-items: center;
+}
+.image-item {
+  background-color: #d3d3d3;
+  width: auto;
+  max-width: 25vw;
+  aspect-ratio: 1/1;    /* format image to square shape */
+  object-fit:cover; 
+  overflow: hidden;
+}
+.image-item::after {
+  /* content: ''; */
+  display: block;
+  padding-top: 100%; /* This creates the square shape */
+}
+
+.main-container .info-section {
+  width: 1vw;
+  height: 50rem;
+  flex: 0.75;
+  right: 0;
+}
+
+.info-section .text-group { 
+  color: #000;
+  font-family: "Inria Sans";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.info-section .text-group p {
+  margin-bottom: 0.4rem;
+  font-weight: 400;
+}
+.info-section .text-group h1, h2{
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+}
+
+/* The button show as the 2x2 grid  */
+.info-section .button-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.7rem;
+  max-width: 15rem;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+
+/* Where show the product's main colours*/
+.color-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #000;
+  border-radius: 5px; 
+}
+.color-box span {
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* The color abstraction */
+.color-circle {
+  width: 20px; 
+  height: 20px; 
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+/* Format: Size Selection button */
+.info-section .button-grid button {
+  width: 4.8vw;
+  height: 2.6rem;
+  max-height: 4rem;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid #000; 
+  background: rgba(0, 0, 0, 0.00);
+  border-radius: 5px; 
+}
+.info-section .button-grid button:hover {
+  background-color: #7d8383;
+}
+.info-section .button-grid button.selected {
+  background-color: #333535;
+  color: #fff;
+}
+
+/* Format: Add-to-cart button */
+.adding-button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.adding-button-container button {
+  padding: 1rem 1rem;
+  border: 2px solid #000;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  max-width: 18rem;
+  width: 100%;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.7);
+
+  font-family: "Raleway-MediumItalic", Helvetica;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.add-to-bag {
+  background-color: #333535;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.adding-button-container button:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.7);
+  transform: translateY(2px);
+}
+
+/* Description Format */
+.product-page .product-description {
+  position: relative;
+  bottom: 0;
+  width: 46.5vw;
+  height: auto;
+  max-height: 50rem;
+  flex-shrink: 0;
+  padding-left: 5.2vw;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding-bottom 0.5s ease; /* Smooth transition */
+}
+
+/* Slider show the related product
+   Slider from the Slider/Slider.jsx */
+.related-product {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+  color: #000;
+  font-family: "Inria Sans";
+  font-size: 1.25rem;
+  font-style: normal;
+  line-height: normal;
+  font-weight: 700;
+}
+.related-product h1{
+  padding-left: 5.2vw;
+} 
+.related-product-slider {
+  width: 71vw;
+  height: auto;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+      /* Review section */
+.review-section {
+  margin: 0rem 5rem;
+  padding: 3rem 4rem;
+  width: 45vw;
+  height: auto;
+  max-height: 65rem;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #F5F5F5;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.rating {
+  display: flex;
+  font-family: "Inria Sans";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* Format average score */
+.rating-score {
+  color: #000;
+  font-family: "Inria Sans";
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-right: 5px;
+  padding: 1rem 4rem;
+}
+/* Showing star format */
+.star {
+  flex-shrink: 0;
+  padding-top: 0.5rem;
+  color: gold;
+  stroke-width: 1px;
+  stroke: #000;
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Use for accurate star display (e.g. 3.5, 4.5) */
+.star.full {
+  color: gold;
+}
+.star.half {
+  color: gold;
+  position: relative;
+}
+.star.half::before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color:transparent;
+  text-shadow: 1px 1px 2px black;
+}
+.star.half::after {
+  content: "★";
+  position: absolute;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+  color: gold;
+}
+.star.empty {
+  color: transparent;
+  text-shadow: 1px 1px 2px black; 
+}
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+/* Number of review left for this product */
+.review-count {
+  padding: 1.8rem 2rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  color: #333535;
+}
+.reviews {
+  overflow: hidden;
+  max-height: 65rem; /* Adjust this value based on how many reviews you want to show initially */
+  position: relative;
+  transition: max-height 0.3s ease;
+}
+.review {
+  display: none; /* Hide all reviews initially */
+  margin-bottom: 1rem;
+}
+.review.show {
+  display: block; /* Show the reviews with the class 'show' */
+}
+
+/* Leave the review button */
+.leave-review-button-container {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.leave-review-button-container button{
+  padding: 0.5em 4em 0.5em 4em;
+  border-radius: 10px;
+  margin-bottom: 2em;
+  background-color: #cbcbcb;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.7);
+  border: 2px solid black;
+
+  color: #000;
+  font-family: "Inria Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.leave-review-button:hover {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.7);
+  transform: translateY(2px);
+}
+
+/* Engroup 5 reviews and show 
+   Increase review pages to see more */
+.review-pagination {
+  display: flex;
+  justify-content: center;
+}
+.arrow {
+  margin: 0 10px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  background-color: #f9f9f9;
+}
+.arrow:hover{
+  background-color: #666;
+}
+.review-pagination .arrow.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* Format review page number */
+.review-pagination .page-number {
+  margin: 0 10px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #e9e9e9;
+  font-weight: bold;
+}
+.review-pagination .page-number.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+.review-pagination .page-number:hover {
+    background-color: #e9e9e9;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .product-page-layout {
+      padding: 0 10px;
+  }
+
+  .product-section,
+  .info-section {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+  }
+
+  .button-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+
+  .text-group p,
+  .text-group h1,
+  .text-group h2 {
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-description p {
+      font-size: 0.9rem;
+  }
+
+  .rating-score {
+      font-size: 1.2rem;
+  }
+
+  .stars .star {
+      font-size: 1.2rem;
+  }
+
+  .page-number {
+      padding: 3px 7px;
+      font-size: 0.9rem;
+  }
+}
+
+.review h3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-size: 1.2rem;
+}
+
+.review .stars {
+  color: gold;
+  margin: 5px 0;
+}
+
+.review p {
+  /* margin-bottom: 1rem; */
+  font-size: 1rem;
+  color: #333;
+}
+
+.product-pagebreak {
+  border-top: 2px solid black; /* Độ dày, kiểu và màu của*/ 
+}
+
+/* review section here */
+.review-form-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.review-form-popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.rating-input {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.rating-input .star {
+  cursor: pointer;
+}
+
+.rating-input .star.filled {
+  color: gold;
+}
+
+.review-form-popup textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  margin-left: 2.5%;
+}
+
+.form-buttons button[type="submit"],
+.form-buttons button[type="button"] 
+{
+  flex: 0.45;
+  font-size: 1.2rem;
+  font-family: "Inria Sans";
+  padding: 7px;
+  border-radius: 15px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(255, 255, 255, 0.7);
+}
+.form-buttons button[type="submit"] {
+  border: 1px solid green;
+  color: green;
+}
+.form-buttons button[type="button"] {
+  border: 1px solid 505454 ;
+  color: #505454 ;
+}
+
+.form-buttons button[type="submit"]:hover,
+.form-buttons button[type="button"]:hover
+{
+  background-color:   #9fa2a2   ;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(255, 255, 255, 0.7);
+  transform: translateY(2px);   
+} 

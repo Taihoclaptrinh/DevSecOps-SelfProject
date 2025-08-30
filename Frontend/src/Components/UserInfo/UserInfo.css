@@ -1,0 +1,220 @@
+.user-info {
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  box-shadow: 0px 4px 4px #00000040;
+  padding: 40px 60px; /* Giảm padding nếu cần thêm không gian */
+  width: 80%; /* Điều chỉnh kích thước nếu cần */
+  margin: 20px auto;
+  box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến width */
+}
+
+.details-header, .delete-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.edit,
+.save {
+  background-color: #f6f6f6;
+  color: #797979;
+  border: none;
+  padding: 8px 12px; /* Tăng padding để tăng kích thước nút */
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit {
+  margin-right: 10px;
+}
+
+.save {
+  background-color: #e0e0e0;
+}
+
+.details-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Đảm bảo các thành phần nằm trên cùng một cột */
+}
+
+.details-content p {
+  color: #000000;
+  font-family: 'Inria Sans', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.details-content input {
+  width: 100%;
+  padding: 10px; /* Đảm bảo padding đủ để tránh chồng chéo */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px; /* Thêm margin dưới mỗi input để tạo khoảng cách */
+  box-sizing: border-box;
+}
+
+.details-content input:focus {
+  border-color: teal;
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.avatar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+.wishlist-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  transition: box-shadow 0.3s ease;
+}
+
+.wishlist-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-image-wishlist {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.product-info-wishlist {
+  flex-grow: 1;
+}
+
+.product-info-wishlist h3 {
+  margin: 0 0 5px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.product-info-wishlist p {
+  margin: 0;
+  font-size: 16px;
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.orders-content {
+  margin-top: 20px;
+}
+
+.orders-content .order-table {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.cancel-form {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 500px; /* Limit width for better alignment */
+  margin: 0 auto; /* Center the form */
+}
+
+.cancel-form h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.cancel-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.cancel-form input,
+.cancel-form select {
+  width: calc(100% - 20px); /* Full width with padding consideration */
+  padding: 10px;
+  margin-bottom: 15px; /* Spacing between input fields */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.cancel-form button {
+  width: 48%; /* Two buttons next to each other */
+  padding: 10px;
+  margin-top: 10px;
+  margin-right: 2%; /* Spacing between buttons */
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.confirm-cancel {
+  background-color: #4caf50;
+  color: white;
+}
+
+.cancel-cancel {
+  background-color: #f44336;
+  color: white;
+}
+.cancel_order-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 7; /* Đảm bảo rằng overlay cũng xuất hiện trên các phần tử khác */
+}
+
+.cancel_order-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 8; /* Đảm bảo rằng modal hiển thị trên tất cả các phần tử khác */
+}
+@media (max-width: 600px) {
+  .cancel-form {
+    padding: 10px;
+  }
+  .cancel-form button {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 10px; /* Add margin for spacing */
+    margin-right: 0;
+  }
+}

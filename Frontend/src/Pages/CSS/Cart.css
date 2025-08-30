@@ -1,0 +1,200 @@
+.cart-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart-page-layout{
+    position: relative;
+    width: 74vw;
+    min-height: 55rem;
+}
+.cart-main-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    height: auto;
+}
+/* Limit the size of cart */
+.cart-frame{
+    width: 46rem;
+    height: 50rem;
+    display: flex;
+}
+/* the main cart which show the content  */
+.cart {
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    padding: 1rem 5rem;
+    margin: 1.5rem;
+    box-sizing: border-box;
+    width: 45.7rem;
+    height: auto;
+    min-height: 55rem;
+    /* max-height: 57rem; */
+    flex-shrink: 0;
+    border-radius: 60px;
+    background: #F6F6F6;
+
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* the brown background of cart */
+.cart-wrapper {
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 0 0;
+    display: flex;
+    width: 47rem;
+    min-height: 55.6rem;
+    border-radius: 75px;
+    background: #796565;   
+}
+.cart h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000;
+    font-family: Raleway;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bolder;
+    line-height: normal;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
+}
+.cart_products-container {
+    height: 15rem;
+    overflow-y: auto;
+}
+
+.cart_products-container table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse; /* Kết hợp các viền nếu có */
+    border: none; /* Xóa viền của bảng */
+}
+.cart_products-container td {
+    padding: 1rem 0;
+    border: none; /* Xóa viền của các ô */
+}
+.cart_products-container tr {
+    max-height: 4rem;
+    display: flex;
+    align-items: center;
+}
+.cart_quantity-container {
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart_quantity-button {
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    line-height: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cart_quantity-button:hover {
+    background-color: #333;
+}
+
+.cart_quantity {
+    width: 40px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.payment-discount-container {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-discount-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+
+    color: #F98A09;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.payment-discount-row label {
+    width: 150px;
+}
+
+.payment-discount-row select,.payment-discount-row input {
+    flex: 1;
+    margin-left: 12rem;
+    padding: 5px;
+    font-size: 1.2rem; /* Adjust font size if needed */
+}
+.payment-discount-row .appli_coupon_icon {
+    background-color: transparent; 
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2), -3px -3px 6px rgba(131, 128, 128, 0.7);
+}
+.payment-discount-row .appli_coupon_icon:hover {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2), -1px -1px 3px rgba(131, 128, 128, 0.7);
+    transform: translateY(2px);
+}
+.cart .cart-total {
+    text-align: right;
+    font-weight: bold;
+
+    color: #F98A09;
+    font-family: "Inria Sans";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.cart-total .value {
+    color: black; /* Color for the value, change as needed */
+    margin-left: 1.5rem;
+}
+.cart-total .element-total{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid black;
+}
+.cart-total button {
+    display: block;
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cart-total button:hover {
+    background-color: #333;
+}

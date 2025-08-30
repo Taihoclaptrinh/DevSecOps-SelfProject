@@ -1,0 +1,22 @@
+.doc-layout {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.doc-container {
+    width: 73vw;
+    height: auto;
+    margin-bottom: 100px;
+}
+.doc-container h1 {
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+.doc-container p {
+    align-items: justify;
+    width: 100%;
+
+}

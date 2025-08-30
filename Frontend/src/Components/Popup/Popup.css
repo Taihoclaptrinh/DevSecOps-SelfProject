@@ -1,0 +1,52 @@
+.modalbox {
+    padding: 50px;
+    text-align: center;
+    justify-content: center;
+    width: 400px;
+    background-color: whitesmoke;
+}
+.modalbox .circle_faTime {
+    display: flex;
+    justify-content: center;
+    /* width: 50px; */
+}
+.modalbox .circle_faTime .cf1 {
+    border: 2px solid red;
+    border-radius: 50%;
+    padding: 2px 2.5px 2px 2.5px;
+    width: 30px;
+}
+.modalbox.btnback{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    text-decoration: none;
+}
+.btnback a {
+    border: none;
+    border-radius:20px;
+    background-color: #1989c6;
+    padding: 15px;
+    max-width: 200px;
+    font-size: 1rem;
+    color: whitesmoke;
+    text-decoration: 'none';
+}
+.popup.active { /* Show the popup when active class is added */
+    display: block;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+    display: none;
+    z-index: 9;
+}
+.overlay.active{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

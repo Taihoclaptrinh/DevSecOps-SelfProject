@@ -1,0 +1,197 @@
+.login-logup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+}
+
+.login-container {
+    padding: 20px 40px;
+    width: 502.5px;
+    height: 500px;
+}
+
+.login-container h1 {
+    color: #000;
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+.login-container p1 {
+    margin-bottom: 20px;
+    /* font-size: 14px; */
+    color: #888;
+    /* display: flex; */
+    /* margin-top: 0; */
+    color: #000;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.input-container {
+    display: flex;
+    margin-top: 10%;
+}
+
+/* Input email */
+input[type="email"], input[type="password"], input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: -5%;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    
+}
+input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="text"]::placeholder {
+    color: #D9D9D9; /* Đổi màu này thành màu bạn muốn */
+}
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus{
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+
+/* Forgot password */
+.forgot-password {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+} 
+.forgot-password a {
+    color: black;
+    text-decoration: none;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style:bold;
+    font-weight: 400;
+    line-height:normal;
+    margin-top: 2%;
+    cursor: pointer;
+}
+.login-container button {
+    width: 100%;
+    background-color: black;
+    margin-top: 4vh;
+    padding: 1vh;
+    font-weight: normal;
+    border-color: black;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 30px;
+
+    color: #FDF8F8;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.login-container button:hover {
+    background-color: #333;
+}
+/* Sign Up Form */
+.signup-layout {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
+.signup-container {
+    margin-top: 3%;
+    max-width: 100vh;
+    max-height: 80vh;
+}
+
+.signup-container h1 {
+    color: #000;
+    font-family: Raleway;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    /* margin-bottom: 8%;  */
+}
+
+#signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-input-container {
+    margin-bottom: 2rem;
+    width: 100%; /* Đảm bảo input container rộng 100% */
+    max-width: 502.5px; /* Giới hạn chiều rộng tối đa */
+}
+
+.signup-input-container input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing:border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+
+}
+
+.signup-input-container input[type="date"] {
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    
+}
+
+.signup-input-container input[type="date"] + input[type="text"] {
+    width: calc(50% - 10px);
+}
+
+.signup-container button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1.5rem;
+    width: 100%; /* Đảm bảo input container rộng 100% */
+    max-width: 502.5px; /* Giới hạn chiều rộng tối đa */
+    padding: 1.5%;
+
+    font-weight: normal;
+    color: #FDF8F8;
+    font-family: "Inria Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.signup-container button:hover {
+    background-color: #333;
+}

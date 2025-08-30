@@ -1,0 +1,91 @@
+.AdminDatatable {
+  height: 600px;
+  width: 70vw;
+  padding: 20px;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  background-color: white;
+  overflow: auto;
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+}
+
+.AdminDatatable .datatableTitle {
+  width: 100%;
+  font-size: 24px;
+  color: gray;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.AdminDatatable .datatableTitle .link {
+  text-decoration: none;
+  color: #3f51b5;
+  font-size: 16px;
+  font-weight: 400;
+  border: 1px solid #3f51b5;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.AdminDatatable .datatableTitle .link:hover {
+  background-color: #3f51b5;
+  color: white;
+}
+
+.AdminDatatable .cellWithImg {
+  display: flex;
+  align-items: center;
+}
+
+.AdminDatatable .cellWithImg .cellImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.AdminDatatable .cellWithStatus {
+  padding: 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.AdminDatatable .cellWithStatus.active {
+  background-color: rgba(0, 128, 0, 0.05);
+  color: green;
+}
+
+.AdminDatatable .cellWithStatus.pending {
+  background-color: rgba(255, 217, 0, 0.05);
+  color: goldenrod;
+}
+
+.AdminDatatable .cellWithStatus.passive {
+  background-color: rgba(255, 0, 0, 0.05);
+  color: crimson;
+}
+
+.AdminDatatable .cellAction {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.AdminDatatable .cellAction .viewButton {
+  color: darkblue;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.AdminDatatable .cellAction .deleteButton {
+  color: crimson;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
